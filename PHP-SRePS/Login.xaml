@@ -1,0 +1,25 @@
+﻿<Window x:Class="PHP_SRePS.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PHP_SRePS"
+        mc:Ignorable="d"
+        Title="Login" Height="440" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="279" Margin="391,63,0,0" Stroke="Black" VerticalAlignment="Top" Width="1" Opacity="0.4"/>
+        <!-- Text Blocks -->
+        <TextBlock HorizontalAlignment="Left" Margin="64,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="237" Width="322" FontWeight="Bold" FontFamily="Nirmala UI" FontSize="24"><Run FontSize="72" Text="PHP"/><LineBreak/><Run FontSize="20" Text="SALES REPORT "/><LineBreak/><Run FontSize="20" Text="AND PREDICTION SYSTEM"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="559,92,0,0" TextWrapping="Wrap" Text="Login Here" VerticalAlignment="Top" Width="64"/>
+        <!-- Login Input TextBoxs -->
+        <TextBox x:Name="user" HorizontalAlignment="Left" Height="29" Margin="490,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="490,182,0,0" PasswordChar="*" VerticalAlignment="Top" Width="203" Height="29" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <!-- Login Icons -->
+        <Image HorizontalAlignment="Left" Height="34" Margin="452,182,0,0" VerticalAlignment="Top" Width="33" Source="pack://application:,,,/Images/passIcon.png" Opacity="0.5"/>
+        <Image HorizontalAlignment="Left" Height="29" Margin="452,130,0,0" VerticalAlignment="Top" Width="33" Source="pack://application:,,,/Images/UserIcon.png" Opacity="0.5"/>
+        <!-- Login Button -->
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="490,251,0,0" VerticalAlignment="Top" Width="203" Height="49" Click="LoginButton_Click" IsCancel="True"
+                IsDefault="True"/>
+    </Grid>
+</Window>

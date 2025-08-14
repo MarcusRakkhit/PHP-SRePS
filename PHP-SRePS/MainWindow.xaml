@@ -1,0 +1,67 @@
+<Window x:Class="PHP_SRePS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PHP_SRePS"
+        mc:Ignorable="d"
+        Title="PHP-SRePS" Height="280" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- Sales Report -->
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="202" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="366" Opacity="0.5"/>
+        <!-- TextBlocks -->
+        <TextBlock HorizontalAlignment="Left" Margin="26,21,0,0" TextWrapping="Wrap" Text="Sales Report" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,54,0,0" TextWrapping="Wrap" Text="Frequency" VerticalAlignment="Top" TextDecorations="{x:Null}"/>
+        <!-- ComboBoxs -->
+        <ComboBox x:Name="dropDown" HorizontalAlignment="Left" Margin="26,89,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" SelectionChanged="SalesPeriod">
+            <ComboBoxItem x:Name="Weekly" Content="Weekly" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem x:Name="Monthly" Content="Monthly" HorizontalAlignment="Left" Width="118.4"/>
+        </ComboBox>
+        <!-- Buttons -->
+        <Button Content="Add Sale" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="22,135,0,0" Height="50" Click="AddSale"/>
+        <Button Content="Display Sales" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="107,135,0,0" Height="50" Click="DisplaySales"/>
+        <Button Content="Predict Sales" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="192,135,0,0" Height="50" Click="PredictSales"/>
+        <Button Content="Generate CSV" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="277,135,0,0" Height="50" Click="GenerateCSV"/>
+        <!-- Inventory Management -->
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="202" Margin="410,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="368" Opacity="0.5"/>
+        <!-- TextBlocks -->
+        <TextBlock HorizontalAlignment="Left" Margin="430,21,0,0" TextWrapping="Wrap" Text="Inventory Management" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="433,42,0,0" TextWrapping="Wrap" Text="Item" VerticalAlignment="Top" TextDecorations="{x:Null}" RenderTransformOrigin="0.686,0.217"/>
+        <TextBlock HorizontalAlignment="Left" Margin="550,42,0,0" TextWrapping="Wrap" Text="Quantity" VerticalAlignment="Top" TextDecorations="{x:Null}" RenderTransformOrigin="0.686,0.217"/>
+        <TextBlock HorizontalAlignment="Left" Margin="664,42,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" TextDecorations="{x:Null}" RenderTransformOrigin="0.686,0.217"/>
+        <TextBlock HorizontalAlignment="Left" Margin="433,98,0,0" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" TextDecorations="{x:Null}" RenderTransformOrigin="0.937,4.581"/>
+        <!-- TextBoxs -->
+        <TextBox x:Name="item" HorizontalAlignment="Left" Height="22" Margin="431,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="99" TextChanged="InventoryItem"/>
+        <TextBox x:Name="quantity" HorizontalAlignment="Left" Height="23" Margin="550,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="99" TextChanged="InventoryQuantity"/>
+        <TextBox x:Name="category" HorizontalAlignment="Left" Height="23" Margin="664,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="99" TextChanged="InventoryCategory"/>
+        <TextBox x:Name="price" HorizontalAlignment="Left" Height="22" Margin="431,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="99" TextChanged="InventoryPrice"/>
+        <!-- Buttons -->
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="428,163,0,0" Height="34" Click="AddStock">
+            <StackPanel>
+                <TextBlock>Add Stock</TextBlock>
+                <Image Source="pack://application:,,,/Images/Add_16x.png" Height="16" Width="16"/>
+            </StackPanel>
+        </Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="513,163,0,0" Height="34" Click="RemoveStock">
+            <StackPanel>
+                <TextBlock>Remove Stock</TextBlock>
+                <Image Source="pack://application:,,,/Images/Remove_color_16x.png" Height="16" Width="16"/>
+            </StackPanel>
+        </Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="598,163,0,0" Height="34" Click="UpdateStock">
+            <StackPanel>
+                <TextBlock>Update Stock</TextBlock>
+                <Image Source="pack://application:,,,/Images/Refresh_16x.png" Height="16" Width="16"/>
+            </StackPanel>
+        </Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="683,163,0,0" Height="34" Click="ShowStock">
+            <StackPanel>
+                <TextBlock>Show Stock</TextBlock>
+                <Image Source="pack://application:,,,/Images/ShowAllFiles_16x.png" Height="16" Width="16"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="Log_out" Content="Log Out" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="75" Click="LogOut"/>
+	<Label x:Name="userName" Content="USER: " HorizontalAlignment="Right" Margin="646,217,0,0" VerticalAlignment="Top" Width="132" FontWeight="Bold"/>
+	</Grid>
+</Window>

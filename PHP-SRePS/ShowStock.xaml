@@ -1,0 +1,20 @@
+﻿<Window x:Class="PHP_SRePS.ShowStock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PHP_SRePS"
+        mc:Ignorable="d"
+        Title="Show Stock" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- Search TextBlock -->
+        <TextBlock HorizontalAlignment="Left" Margin="612,10,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" RenderTransformOrigin="-1.497,0.799"/>
+        <!-- Search Icon -->
+        <Image HorizontalAlignment="Left" Height="16" Margin="652,10,0,0" VerticalAlignment="Top" Width="16" Source="pack://application:,,,/Images/search_16x.png" RenderTransformOrigin="2.238,0.533"/>
+        <!-- Search TextBox -->
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="16" Margin="673,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" TextChanged="SearchBox_TextChanged"/>
+        <!-- Product DataGrid -->
+        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Height="360" VerticalAlignment="Top" Width="763" Margin="10,40,0,0" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

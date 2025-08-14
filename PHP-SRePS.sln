@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHP-SRePS", "PHP-SRePS\PHP-SRePS.csproj", "{C9704001-E825-429E-9B3C-341C46E7F6B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationTest", "ValidationTest\ValidationTest.csproj", "{BE767030-367C-4BFE-AE5E-AC48ABF74B5C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C9704001-E825-429E-9B3C-341C46E7F6B1} = {C9704001-E825-429E-9B3C-341C46E7F6B1}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9704001-E825-429E-9B3C-341C46E7F6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9704001-E825-429E-9B3C-341C46E7F6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9704001-E825-429E-9B3C-341C46E7F6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9704001-E825-429E-9B3C-341C46E7F6B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE767030-367C-4BFE-AE5E-AC48ABF74B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE767030-367C-4BFE-AE5E-AC48ABF74B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE767030-367C-4BFE-AE5E-AC48ABF74B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE767030-367C-4BFE-AE5E-AC48ABF74B5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6992149D-4621-4CF9-BB31-4A5059C21C6C}
+	EndGlobalSection
+EndGlobal
